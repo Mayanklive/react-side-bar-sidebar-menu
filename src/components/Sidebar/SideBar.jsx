@@ -12,12 +12,12 @@ import SidebarMenu from "./SidebarMenu";
 import NavBar from "./NavBar";
 const routes = [
   {
-    path:'/',
+    path:'/dashboard',
     name:"DashBoard",
     icon:<MdDashboard />,
     subRoutes:[
       {
-      path:"/",
+      path:"/user/dashboard",
       name:"Main Dashboard"
     }
   ]
@@ -28,19 +28,19 @@ const routes = [
     icon:<FaMoneyBillAlt />,
     subRoutes:[
       {
-        path:"/billing_module/up_ola-data",
+        path:"/user/billing_module/up_ola-data",
         name:"Upload Ola-Data"
       },
       {
-        path:"/billing_module/up_uber-data",
+        path:"/user/billing_module/up_uber-data",
         name:"Upload Uber-Data"
       },
       {
-        path:"/billing_module/expense_details",
+        path:"/user/billing_module/expense_details",
         name:"Expense Details"
       },
       {
-        path:"/billing_module/payment_advises",
+        path:"/user/billing_module/payment_advises",
         name:"Payment Advises"
       }
     ]
@@ -51,19 +51,19 @@ const routes = [
     icon:<MdManageAccounts />,
     subRoutes:[
       {
-        path:"/management/driver_management",
+        path:"/user/management/driver_management",
         name:"Driver Management"
       },
       {
-        path:"/management/vehicle_management",
+        path:"/user/management/vehicle_management",
         name:"Vehicle Management"
       },
       {
-        path:"/management/mapping",
+        path:"/user/management/mapping",
         name:"Driver-Vehicle Mapping"
       },
       {
-        path:"/management/user_management",
+        path:"/user/management/user_management",
         name:"User Management"
       }
     ]
@@ -74,15 +74,15 @@ const routes = [
     icon:<AiFillFile />,
     subRoutes:[
       {
-        path:"/report/driver_revenue",
+        path:"/user/report/driver_revenue",
         name:"Driver Wise Revenue"
       },
       {
-        path:"/report/utilization",
+        path:"/user/report/utilization",
         name:"Vehicle Utilization"
       },
       {
-        path:"/report/maintenance",
+        path:"/user/report/maintenance",
         name:"Vehicle Maintenance"
       }
     ]
@@ -93,11 +93,11 @@ const routes = [
     icon:<MdBusinessCenter />,
     subRoutes:[
       {
-        path:"/business_logic/model",
+        path:"/user/business_logic/model",
         name:"Business Model"
       },
       {
-        path:"/business_logic/incentive_program",
+        path:"/user/business_logic/incentive_program",
         name:"Incentive Program"
       }
     ]
@@ -108,11 +108,11 @@ const routes = [
     icon:<AiFillProfile />,
     subRoutes:[
       {
-        path:"/profile/user_profile",
+        path:"/user/profile/user_profile",
         name:"User Profile"
       },
       {
-        path:"/profile/reset_profile",
+        path:"/user/profile/reset_profile",
         name:"Reset Profile"
       }
     ]
@@ -120,6 +120,7 @@ const routes = [
 ];
 
 const SideBar = ({ children }) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
