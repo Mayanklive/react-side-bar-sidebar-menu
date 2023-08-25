@@ -23,9 +23,9 @@ const Expense_Details=()=>{
                 className="mb-2"
                 variant="outline-secondary"
                 onClick={handleShow}
-                title="Add Vehicle"
+                title="Add Expenses"
               >
-                Add Vehicle &nbsp;
+                Add Expenses &nbsp;
                 <FaPlus />
               </Button>
             </div>
